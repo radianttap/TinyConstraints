@@ -4,6 +4,9 @@
     <img src="Art/header.png" width="890" alt="TinyConstraints"/>
 </p>
 
+Version 5.x is made for projects using Swift oncurrency checking set to Complete.
+Version 4.x is for older projects. 
+
 ## Features
 
 - [X] Pure Swift 5 sweetness.

@@ -1,10 +1,10 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "TinyConstraints",
     platforms: [
-        .macOS(.v10_11), .iOS(.v9), .tvOS(.v9)
+        .macOS(.v10_15), .iOS(.v15), .tvOS(.v15)
     ],
     products: [
         .library(name: "TinyConstraints", targets: ["TinyConstraints"])

@@ -30,6 +30,9 @@
 		A932CB741F78081B00401861 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TinyConstraints+superview.swift"; sourceTree = "<group>"; };
 		A97552CD2128478300C1EC7E /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyEdgeInsets.swift; sourceTree = "<group>"; };
 		A9D467D01E6777CA00C331FA /* Abstraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Abstraction.swift; sourceTree = "<group>"; };
+		D0814C6E2BCEC92E00430BF8 /* TinyConstraints.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = TinyConstraints.podspec; sourceTree = "<group>"; };
+		D0814C6F2BCEC92E00430BF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0814C702BCEC92E00430BF8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,9 @@
 		2DD986F11E4DB973002F80D6 = {
 			isa = PBXGroup;
 			children = (
+				D0814C702BCEC92E00430BF8 /* Package.swift */,
+				D0814C6F2BCEC92E00430BF8 /* README.md */,
+				D0814C6E2BCEC92E00430BF8 /* TinyConstraints.podspec */,
 				2DD986FD1E4DB973002F80D6 /* TinyConstraints */,
 				2DD986FC1E4DB973002F80D6 /* Products */,
 			);
