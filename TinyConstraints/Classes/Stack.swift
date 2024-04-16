@@ -28,7 +28,7 @@
     import UIKit
 #endif
 
-public extension TinyView {
+@MainActor public extension TinyView {
     
     @discardableResult
     func stack(_ views: [TinyView], axis: ConstraintAxis = .vertical, width: CGFloat? = nil, height: CGFloat? = nil, spacing: CGFloat = 0) -> Constraints {

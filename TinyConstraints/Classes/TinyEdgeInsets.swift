@@ -28,7 +28,7 @@
     import UIKit
 #endif
 
-extension TinyEdgeInsets {
+@MainActor extension TinyEdgeInsets {
     
     public static func uniform(_ value: CGFloat) -> TinyEdgeInsets {
         return TinyEdgeInsets(top: value, left: value, bottom: value, right: value)

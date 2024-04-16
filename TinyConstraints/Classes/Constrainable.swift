@@ -27,7 +27,7 @@
     import UIKit
 #endif
 
-extension TinyView: Constrainable {
+@MainActor extension TinyView: Constrainable {
     
     @discardableResult
     public func prepareForLayout() -> Self {
@@ -36,12 +36,12 @@ extension TinyView: Constrainable {
     }
 }
 
-extension LayoutGuide: Constrainable {
+@MainActor extension LayoutGuide: Constrainable {
     @discardableResult
     public func prepareForLayout() -> Self { return self }
 }
 
-public protocol Constrainable {
+@MainActor public protocol Constrainable {
     var topAnchor: NSLayoutYAxisAnchor { get }
     var bottomAnchor: NSLayoutYAxisAnchor { get }
     var leftAnchor: NSLayoutXAxisAnchor { get }

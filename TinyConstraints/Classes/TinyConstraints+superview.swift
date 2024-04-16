@@ -25,7 +25,7 @@
 #if os(OSX)
     import AppKit
     
-    public extension TinyView {
+@MainActor public extension TinyView {
         
         @discardableResult
         func edgesToSuperview(excluding excludedEdge: LayoutEdge = .none, insets: TinyEdgeInsets = .zero, usingSafeArea: Bool = false) -> Constraints {
@@ -53,7 +53,7 @@
 #else
     import UIKit
     
-    public extension TinyView {
+@MainActor public extension TinyView {
         
         @available(tvOS 10.0, *)
         @available(iOS 10.0, *)
@@ -150,7 +150,7 @@
     }
 #endif
 
-public struct LayoutEdge: OptionSet {
+public struct LayoutEdge: OptionSet, Sendable {
     public let rawValue: UInt8
     public init(rawValue: UInt8) {
         self.rawValue = rawValue
@@ -164,7 +164,7 @@ public struct LayoutEdge: OptionSet {
     public static let none = LayoutEdge(rawValue: 1 << 6)
 }
 
-public extension TinyView {
+@MainActor public extension TinyView {
     
     private func safeConstrainable(for superview: TinyView?, usingSafeArea: Bool) -> Constrainable {
         guard let superview = superview else {

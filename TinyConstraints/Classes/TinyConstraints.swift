@@ -28,7 +28,7 @@
     import UIKit
 #endif
 
-public extension Constrainable {
+@MainActor public extension Constrainable {
     
     @discardableResult
     func center(in view: Constrainable, offset: CGPoint = .zero, priority: LayoutPriority = .required, isActive: Bool = true) -> Constraints {
@@ -339,7 +339,7 @@ public extension Constrainable {
     }
 }
 
-public extension TinyView {
+@MainActor public extension TinyView {
     
     func setHugging(_ priority: LayoutPriority, for axis: ConstraintAxis) {
         setContentHuggingPriority(priority, for: axis)

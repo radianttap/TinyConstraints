@@ -31,13 +31,13 @@
 public typealias Constraint = NSLayoutConstraint
 public typealias Constraints = [Constraint]
 
-public enum ConstraintRelation: Int {
+public enum ConstraintRelation: Int, Sendable {
     case equal = 0
     case equalOrLess = -1
     case equalOrGreater = 1
 }
 
-public extension Collection where Iterator.Element == Constraint {
+@MainActor public extension Collection where Iterator.Element == Constraint {
     
     func activate() {
         
@@ -55,7 +55,7 @@ public extension Collection where Iterator.Element == Constraint {
 }
 
 #if os(OSX)
-public extension Constraint {
+@MainActor public extension Constraint {
     @objc
     func with(_ p: Constraint.Priority) -> Self {
         priority = p
@@ -68,7 +68,7 @@ public extension Constraint {
     }
 }
 #else
-    public extension Constraint {
+@MainActor public extension Constraint {
         @objc
         func with(_ p: LayoutPriority) -> Self {
             priority = p
